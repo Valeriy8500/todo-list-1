@@ -2,7 +2,9 @@ import React from 'react';
 import TodoListItem from '../todo-list-item';
 import './todo-list.css';
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, onDeleted,
+                    onToggleImportant,
+                    onToggleDone }) => {
 
   const element = todos.map((item) => {
 
@@ -10,15 +12,19 @@ const TodoList = ({ todos }) => {
 
     return (
       <li key={id} className='list-group-item'>
-        {/* spread operator */}
-        <TodoListItem {...itemProps} />
+        <TodoListItem
+          // spread operator
+        {...itemProps}
+          onDeleted={() => onDeleted(id)}
+          onToggleImportant={() => onToggleImportant(id)}
+          onToggleDone={() => onToggleDone(id)} />
       </li>
     )
   })
 
   return (
     <ul className='list-group todo-list'>
-      { element}
+      { element }
     </ul>
   );
 };
