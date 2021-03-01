@@ -105,7 +105,7 @@ export default class App extends Component {
 
     return items.filter((item) => {
       return item.label.toLowerCase()
-            .indexOf(term.toLowerCase()) > -1;
+        .indexOf(term.toLowerCase()) > -1;
     })
   };
 
@@ -135,7 +135,6 @@ export default class App extends Component {
     const todoCount = todoData.length - doneCount;
 
     return (
-
       <div className="todo-app">
         <AppHeader
           toDo={todoCount}
@@ -159,5 +158,4 @@ export default class App extends Component {
       </div>
     )
   };
-
 };

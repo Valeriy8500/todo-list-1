@@ -39,5 +39,4 @@ export default class ItemAddForm extends Component {
       </form>
     )
   };
-
 };
