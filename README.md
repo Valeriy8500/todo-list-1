@@ -11,7 +11,7 @@
 
 **Клонирование проекта и другие команды:**
 
-1. git clone https://github.com/Valeriy8500/Todo.git
+1. git clone https://github.com/Valeriy8500/todo-list-1.git
 2. npm install (устанавливаем зависимости)
 3. npm start (запускаем проект)
 
